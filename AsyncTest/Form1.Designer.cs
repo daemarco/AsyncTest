@@ -34,6 +34,9 @@
             txtMessage = new TextBox();
             lblMessage = new Label();
             btnClear = new Button();
+            pnlColors = new Panel();
+            lblNotes = new Label();
+            txtNotes = new TextBox();
             SuspendLayout();
             // 
             // txtFilter
@@ -91,11 +94,38 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // pnlColors
+            // 
+            pnlColors.Location = new Point(410, 63);
+            pnlColors.Name = "pnlColors";
+            pnlColors.Size = new Size(96, 375);
+            pnlColors.TabIndex = 6;
+            // 
+            // lblNotes
+            // 
+            lblNotes.AutoSize = true;
+            lblNotes.Location = new Point(7, 455);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new Size(38, 15);
+            lblNotes.TabIndex = 7;
+            lblNotes.Text = "Notes";
+            // 
+            // txtNotes
+            // 
+            txtNotes.Location = new Point(7, 473);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.Size = new Size(397, 84);
+            txtNotes.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(518, 450);
+            ClientSize = new Size(518, 569);
+            Controls.Add(txtNotes);
+            Controls.Add(lblNotes);
+            Controls.Add(pnlColors);
             Controls.Add(btnClear);
             Controls.Add(lblMessage);
             Controls.Add(txtMessage);
@@ -116,5 +146,8 @@
         private TextBox txtMessage;
         private Label lblMessage;
         private Button btnClear;
+        private Panel pnlColors;
+        private Label lblNotes;
+        private TextBox txtNotes;
     }
 }

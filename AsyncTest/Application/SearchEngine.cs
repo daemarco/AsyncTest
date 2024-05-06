@@ -1,17 +1,19 @@
-﻿namespace AsyncTest.Application
+﻿using AsyncTest.Infrastructure;
+
+namespace AsyncTest.Application
 {
     public class SearchEngine : ISearchEngine
     {
-        public SearchEngine()
+        private readonly ICatalogRepo _catalogRepo;
+
+        public SearchEngine(ICatalogRepo catalogRepo)
         {
-            
+            _catalogRepo = catalogRepo;
         }
 
         public async Task<IEnumerable<string>> Search(string searchString)
         {
-            //throw new NotImplementedException("TODO-Marco");
-
-            return new List<string> { "sdfsdf", "sfd;fkjh", "sdfljghdflkgh" };
+            return await _catalogRepo.SearchProducts(searchString);
         }
     }
 }
